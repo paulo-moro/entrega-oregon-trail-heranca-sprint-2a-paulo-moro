@@ -36,11 +36,11 @@ class Wagon {
 }
 
 class Traveler{
-    constructor(nome){
+    constructor(nome,food = 1, isHealthy = true){
        
         this._nome = nome
-        this._food = 1
-        this._isHealth = true
+        this._food = food
+        this._isHealth = isHealthy
         
     }
     get nome(){
@@ -68,10 +68,10 @@ class Traveler{
 }
 
 class Hunter extends Traveler{
-    constructor(nome){
-        super(nome)
+    constructor(nome,isHealthy){
+        super(nome,isHealthy)
         this._food = 2
-        this._isHealth = true
+        
 
     }
     get nome(){
@@ -110,10 +110,9 @@ class Hunter extends Traveler{
 }
 
 class Doctor extends Traveler{
-    constructor(nome){
-        super(nome)
-        this._food = 1
-        this._isHealth = true
+    constructor(nome, food, isHealthy){
+        super(nome, food, isHealthy)
+        
     }
     heal(traveler){
         if(traveler._isHealth == false){
