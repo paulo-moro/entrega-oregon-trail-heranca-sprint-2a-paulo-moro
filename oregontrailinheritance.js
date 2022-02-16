@@ -3,7 +3,24 @@ class Wagon {
         this._capacity = capacity
         this._passenger = []
     }
-       
+    set capacity(novaCapacity){
+        if(typeof this._capacity == "number" && typeof novaCapacity == "number"){
+            this._capacity = novaCapacity
+        }
+        else {
+            console.log("o input deve ser um número")
+        }
+    }
+    get capacity(){
+        if(typeof this_capacity == "number"){
+            return this._capacity
+        }
+        else{
+            console.log("Informe um input válido(Número)")
+            return this._capacity = undefined
+        }
+    }
+    
     
     join(passenger){
         if(this._capacity > this._passenger.length){
@@ -46,6 +63,21 @@ class Traveler{
     get nome(){
         return this._nome
     }
+    set nome(novoNome){
+        this._nome = novoNome
+    }
+    get food(){
+        return this._food
+    }
+    set food(maisFood){
+        this._food = maisFood
+    }
+    get isHealthy(){
+        return this._isHealth
+    }
+    set isHealthy(novaSaude){
+        this._isHealth =novaSaude
+    }
     
 
     hunt(){
@@ -73,9 +105,6 @@ class Hunter extends Traveler{
         this._food = 2
         
 
-    }
-    get nome(){
-        return this._nome
     }
     
 
@@ -114,6 +143,7 @@ class Doctor extends Traveler{
         super(nome, food, isHealthy)
         
     }
+    
     heal(traveler){
         if(traveler._isHealth == false){
             traveler._isHealth = true
