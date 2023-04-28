@@ -1,5 +1,5 @@
 # Entrega - Estendendo o Oregon Trail com Herança
-# Hello World
+
 Para iniciar, faça o clone desse repositório.
 
 Relembre como usar herança/delegação para estender um objeto de classe criando uma nova variação da classe original. Aqui está um exemplo:
